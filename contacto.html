@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Integral TI | Soporte Técnico In Situ y Citas</title>
+    <meta name="description" content="Servicios TI integrales para Pymes y usuarios: mantenimiento informático, instalación de redes, montaje de ordenadores personalizados y reparaciones en nuestro local o in situ.">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <marquee id="miMarquesina""><span class="texto"></span></marquee>
+    <header>
+        <div class="logo">
+            <a href="index.html">Integral TI</a>
+        </div>
+        <button class="nav-toggle" aria-label="Abrir menú de navegación">☰</button>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section>
+            <h1>Contacta con Integral TI</h1>
+            <p>Estamos disponibles para resolver tus problemas informáticos y planificar tu infraestructura. Rellena el formulario o utiliza los datos directos.</p>
+            
+            <div>
+                <h3>Datos de Contacto</h3>
+                <p>📞 Teléfono: <a href="tel:+34666666666">+34 666 666 666</a></p>
+                <p>📧 Email: <a href="mailto:soporte@integralti.com">soporte@integralti.com</a></p>
+                <p>📍 Dirección Local: Calle rue del percebe 13, 13001, Ciudada Real</p>
+            </div>
+            
+            <div>
+                <h3>Localízanos</h3>
+                <!-- FALTA POR HACER -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Envíanos tu Consulta</h2>
+             <!-- FALTA POR HACER -->
+            <form id="Formulario" action="#" method="post">
+                
+                <label for="nombre">Nombre Completo (*)</label>
+                <input type="text" id="nombre" name="nombre" required aria-required="true">
+                <label for="email">Correo Electrónico (*)</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="servicio">Asunto/Servicio Requerido (*)</label>
+                <select id="servicio" name="servicio" required aria-required="true">
+                    <option value="">-- Seleccione un servicio --</option>
+                    <option value="mantenimiento">Mantenimiento Pymes</option>
+                    <option value="montaje">Montaje PC a Medida</option>
+                    <option value="reparacion">Reparación/Soporte Técnico</option>
+                    <option value="redes">Redes e Infraestructura</option>
+                    <option value="otro">Otra Consulta</option>
+                </select>
+
+                <label for="mensaje">Mensaje (*)</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true"></textarea>
+                
+                <div id="error-message" style="color: red; margin-bottom: 15px;"></div>
+
+                <button type="submit" id="submitButton" class="boton">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+        <section class="footer-links">
+            <nav>
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="pages/servicios/redes-infraestructura.html">Redes e Infraestructura</a></li>
+                    <li><a href="pages/servicios/reparacion-hardware.html">Reparaciones</a></li>
+                    </ul>
+            </nav>
+            <nav>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="pages/legales/aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="pages/legales/politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="pages/legales/politica-cookies.html">Política de Cookies</a></li>
+                    
+                </ul>
+            </nav>
+        </section>
+        <p>&copy; 2025 Integral TI. Todos los derechos reservados por jbc.</p>
+    </footer>
+    
+    <script src="js/main.js"></script> 
+    <script src="js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* VARIABLES GLOBALES */
+:root {
+    --color-fondo-cuerpo:#f4f7f9;
+    --color-cuerpo:#333;
+    --color-cabeceras-h1h3:#0056b3;
+    --color-fondo-cabecera:#ffffff;
+    --color-enlaces-a:#007bff;
+    --color-fondo_articulo:#3a648f;
+    --color-articulo:white;
+    --color-logo-a:#0056b3;
+    /* Espacio arriba y abajo */
+    --articulo-cabecera-paddin-a:10px;
+    /* Espacio izquierda derecha */
+    --articulo-cabecera-paddin-b:20px
+
+}
+/* RESET BÁSICO Y ESTILOS GLOBALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: var(--color-cuerpo);
+     background-color: var(--color-fondo-cuerpo);
+}
+body>footer{
+    padding: 2em 1em;
+}
+
+main, header, footer, section, nav, article {
+    /* Aseguramos que todas las etiquetas semánticas se puedan manipular con Flexbox/Grid */
+    display: block; 
+}
+
+/* MARQUESINA */
+#miMarquesina {
+    color:white;
+    text-shadow: 3px 4px 0px black;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    background: crimson;
+   
+}
+.texto::after {
+    content: "Esta página es solo de prueba y aprendizaje";
+}
+/* FIN MARQUESINA */
+
+/* LISTAS */
+ul, ol {
+    padding-left: 50px;
+}
+/* FIN LISTAS*/
+
+.container {
+    display: flex;
+    padding: 10px;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+  /* Color corporativo azul */
+    color: var(--color-cabeceras-h1h3);
+   /* margin-bottom: 0.5em;*/
+}
+
+a {
+    color:var(--color-enlaces-a);
+    text-decoration: none;
+}
+
+/* ARTICLE  */
+
+article footer{
+    background-color: var(--color-fondo_articulo);
+    color: var(--color-articulo);
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+article img {
+    width:100%;
+    height: auto;
+}
+
+article > header {
+    padding: 10px 20px 10px 20px;
+}
+
+/* HEADER Y NAVEGACIÓN */
+header {
+    background-color: var(--color-fondo-cabecera);
+   /*background-color: #ffffff;*/
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    /*color: #0056b3;*/
+    color: var(--color-logo-a);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para navegación de escritorio */
+    gap: 1.5em;
+}
+
+.nav-toggle {
+    display: none; /* Ocultar en escritorio */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ESTILOS DE BOTONES */
+.button, .boton {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.boton {
+    background-color: #28a745; /* Verde para la llamada a la acción principal */
+    color: white;
+}
+
+.boton:hover {
+    background-color: #218838;
+}
+
+/* SECCIONES PRINCIPALES */
+.hero {
+    background-color: #e9f0f7;
+    padding: 4em 1em;
+    text-align: center;
+}
+
+.section-grid {
+    display: grid;
+    gap: 20px;
+    padding: 2em 1em;
+}
+
+/* FOOTER */
+footer {
+    background-color: #343a40;
+    color: white;
+
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.footer-links ul {
+    list-style: none;
+    text-align: left;
+}
+
+.footer-links a {
+    color: #ccc;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+
+/* --- DISEÑO RESPONSIVO (Media Query) --- */
+/* Estilos aplicados cuando la pantalla es MÁS ANCHA de 768px */
+@media (min-width: 768px) {
+    /* Diseño de escritorio */
+    .section-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en escritorio */
+    }
+}
+
+/* Estilos aplicados cuando la pantalla es MÁS ESTRECHA de 767px (Móvil) */
+@media (max-width: 767px) {
+    
+    header {
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .nav-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+    }
+
+    .main-nav {
+        /* Estado inicial del menú hamburguesa */
+        position: absolute;
+        top: 60px; /* Debajo del header */
+        left: 0;
+        width: 100%;
+        height: 0; /* Ocultar */
+        overflow: hidden;
+        background-color: #fff;
+        transition: height 0.3s ease-in-out;
+        z-index: 100;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+    
+    .main-nav.active {
+        height: 250px; /* Altura visible (ajustar según contenido) */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Lista vertical */
+        padding: 1em;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Prohibición de acceso a directorios de trabajo o de prueba
+Disallow: /assets-originales/
+Disallow: /temp/
+Disallow: /pruebas-internas/
+
+# Especifica la ubicación del sitemap
+Sitemap: https://[tu-usuario].github.io/integral-ti/sitemap.xml
