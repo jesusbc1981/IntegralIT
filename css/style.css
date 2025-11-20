@@ -227,13 +227,307 @@ header {
 
 /* FIN GALERIA */
 
+/* CARRUSEL */
 
-/* SECCIONES PRINCIPALES */
-.hero {
-    background-color: #e9f0f7;
-    padding: 4em 1em;
-    text-align: center;
+.carrusel{
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    min-height: 77vh;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
 }
+
+.card {
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    background-image: url(../img/redes.webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    text-align: center;
+    min-height: 210px;
+    height: 40vh;
+  }
+  
+.card-image img {
+    width: 100%; /* Toma todo el ancho del contenedor */
+    height: 100%; /* Toma toda la altura del contenedor */
+    border-radius: 10px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla, recortando los excesos */
+}
+  
+
+  .card-content {
+    padding: 20px;
+    min-height: 220px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  .card-content h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    color: #666;
+  }
+
+  .card-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 5px;
+    display: inline-block;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes dot-animation {
+    from {
+      background-color: #bbb;
+      width: 10px;
+    }
+    to {
+      background-color: #333;
+      width: 30px;
+    }
+  }
+  
+  @keyframes dot-animation-reverse {
+    from {
+      background-color: #333;
+      width: 30px;
+    }
+    to {
+      background-color: #bbb;
+      width: 10px;
+    }
+  }
+  
+  .active-dot {
+    animation-name: dot-animation;
+    animation-fill-mode: forwards;
+  }
+  
+  .dot:not(.active-dot) {
+    animation-name: dot-animation-reverse;
+    animation-fill-mode: forwards;
+  }
+
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .next-button {
+    background-color: #272727;
+    color: white;
+    border: 1px solid #272727;  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .next-button:hover {
+    background-color: #939393;
+    border: 1px solid #939393;  
+
+  }
+
+  .previous-button {
+    background-color: #fff;
+    color: #272727;
+    border: 1px solid #272727;  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .previous-button:hover {
+    color: white;
+    border: 1px solid #939393;  
+    background-color: #939393;
+  }
+
+  .ocultar {
+    display: none;
+  }
+
+  .principal {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 150px);
+    z-index: 10;
+    transition: 0.5s;
+  }
+  
+  .siguiente {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50%);
+    z-index: 8;
+    transition: 0.5s;
+    transform: scale(0.8) perspective(40px) rotateY(-0.5deg);
+    filter: blur(3px);
+  }
+
+  .siguiente2 {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% + 120px);
+    z-index: 6;
+    transition: 0.5s;
+    transform: scale(0.6) perspective(40px) rotateY(-0.5deg);
+    filter: blur(8px);
+  }
+
+  .anterior {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 300px);
+    z-index: 8;
+    transition: 0.5s;
+    transform: scale(0.8) perspective(40px) rotateY(0.5deg);
+    filter: blur(3px);
+
+  }
+
+  .anterior2 {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 420px);
+    z-index: 6;
+    transition: 0.5s;
+    transform: scale(0.6) perspective(40px) rotateY(0.5deg);
+    filter: blur(8px);
+  }
+
+  #div-transparent-previous {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    right: calc(50% + 150px);
+    top: 0;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  #div-transparent-next {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    left: calc(50% + 150px);
+    top: 0;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+
+/* FIN CARRUSEL */
+
+
+
+
+
+/* SECCION ERROR */
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.error img{
+    width: 600px;
+    height: auto;
+    transition: width 3.5s;
+}
+
+/* FIN SECCION ERROR*/
+/* SECCIONES PRINCIPALES */
+/* hero */
+
+.hero-img {
+    padding: 50px 0 50px 0;
+    margin: 50px 0 50px 0;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+    height: max-content;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.webp");
+    /* height: 50%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+
+.hero-img > p {
+      color: white;
+}
+.hero-img > h1 {
+    font-size: 2.5vw;
+    color: white;
+}
+@media (min-width: 1600px) {
+    .hero-img > h1 {
+        font-size: 1.66vw;
+    }
+}
+
+
+
+
+
+/* fin hero */
 
 .section-grid {
     display: grid;
@@ -374,6 +668,51 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en escritorio */
     }
 }
+
+
+/* estilo imagen error*/
+
+
+@media (min-width: 1000px) {
+    .error img{
+        width: 800px;
+    
+    }
+
+}
+
+@media (max-width: 600px) {
+    .error img{
+        width: 500px;
+    
+    }
+
+}
+
+@media (max-width: 500px) {
+    .error img{
+        width: 400px;
+    
+    }
+
+}
+
+@media (max-width: 400px) {
+    .error img{
+        width: 300px;
+    
+    }
+
+}
+
+@media (max-width: 300px) {
+    .error img{
+        width: 200px;
+    
+    }
+
+}
+
 
 /* Estilos aplicados cuando la pantalla es MÁS ESTRECHA de 767px (Móvil) */
 @media (max-width: 767px) {

@@ -13,4 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-expanded', !isExpanded);
         });
     }
+
+    //carrusel
+
+   
+
+    //fin carrusel
+
+
+
+
 });

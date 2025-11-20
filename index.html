@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://jesusbc1981.github.io/IntegralIT/index.html">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <marquee id="miMarquesina""><span class="texto"></span></marquee>
@@ -29,15 +30,119 @@
     </header>
     
     <main class="container">
-        <section id="hero" class="hero">
+        <div class="hero-img">
             <h1>Soluciones Tecnológicas Integrales para tu Negocio y Hogar</h1>
             <p>Mantenimiento, Redes, Montaje Custom y Soporte Técnico Rápido.</p>
             <a href="servicios.html" class="button boton">Descubre nuestros servicios</a>
-        </section>
+        </div>
 
     <section>
         <h2>Nuestras Áreas de Experiencia</h2>
-        <div id="carrusel"></div>
+        <div class="carrusel">
+                        
+                        
+            <div class="card principal" id="card-1" ontouchstart="onTouchStart(event)" ontouchend="onTouchEnd(event)">
+                    <a href="servicios.html">  
+                        <div class="card-image" style="background-color: rgb(71, 166, 185);">
+                            <img src="img/redes.webp" alt="Imagen de la escena">
+                        </div>
+                        <div class="card-content">
+                        <h3>Redes e Infraestructuras</h3>
+                        <p>Diseño e implementación de redes cableadas (LAN), WiFi y soluciones de VPN seguras para conectar tu negocio.</p>
+                    </a>
+                    <div class="card-navigation">
+                        <div>
+                            <span class="dot active-dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="nextCard()" class="next-button">&#8594; </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+            
+            
+            <div class="card siguiente" id="card-2" ontouchstart="onTouchStart(event)" ontouchend="onTouchEnd(event)">
+                    <a href="servicios.html">
+                        <div class="card-image" style="background-color: rgb(211, 212, 217);">
+                            <img src="img/mantenimiento.webp" alt="Imagen de la escena">
+                        </div>
+                        <div class="card-content">
+                        <h3>Mantenimiento Proactivo para Pymes</h3>
+                        <p>Planes de soporte continuado, copias de seguridad automáticas y optimización de servidores para evitar caídas.</p>
+                    </a>
+                    <div class="card-navigation">
+                        <div>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="previousCard()"  class="previous-button">&#8592;</button>
+                            <button onclick="nextCard()"  class="next-button">&#8594; </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+            
+                <div class="card siguiente" id="card-3" ontouchstart="onTouchStart(event)" ontouchend="onTouchEnd(event)">
+                    <a href="servicios.html">
+                        <div class="card-image" style="background-color: rgb(255, 209, 103);">
+                            <img src="img/montaje-pc.webp" alt="Imagen de la escena">
+                        </div>
+                        <div class="card-content">
+                        <h3>Montaje de PC a Medida (Custom Build)</h3>
+                        <p>Montamos tu ordenador ideal para gaming, diseño gráfico o estaciones de trabajo con los mejores componentes.</p>
+                    </a>
+                    <div class="card-navigation">
+                        <div>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="previousCard()"  class="previous-button">&#8592;</button>
+                            <button onclick="nextCard()"  class="next-button">&#8594; </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+                
+                <div class="card siguiente2" id="card-4" ontouchstart="onTouchStart(event)" ontouchend="onTouchEnd(event)">
+                    <a href="servicios.html">
+                        <div class="card-image" style="background-color: rgb(255, 209, 103);">
+                            <img src="img/reparacion.webp" alt="Imagen de la escena">
+                        </div>
+                        <div class="card-content">
+                        <h3>Reparación y Soporte Técnico</h3>
+                        <p>Reparaciones rápidas de hardware, eliminación de virus y recuperación de datos en nuestro local o a domicilio.</p>
+                    </a>
+                    <div class="card-navigation">
+                        <div>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="buttons">
+                            <button onclick="previousCard()"  class="previous-button">&#8592;</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </a>   
+
+                <div id="div-transparent-previous" class="ocultar" onclick="previousCard()"></div>
+                <div id="div-transparent-next" class="" onclick="nextCard()"></div>
+		
+        </div>
     </section>
     <section class="section-grid">
         <article>
@@ -58,10 +163,10 @@
             <nav>
                 <h4>Servicios</h4>
                 <ul>
-                    <li><a href="/pages/servicios/redes-infraestructura.html">Redes e Infraestructura</a></li>
-                    <li><a href="/pages/servicios/reparacion-hardware.html">Reparaciones</a></li>
-                    <li><a href="/pages/servicios/montaje-custom-pc.html">Montaje de PC</a></li>
-                    <li><a href="/pages/servicios/mantenimiento-pymes.html">Mantenimiento</a></li>
+                    <li><a href="pages/servicios/redes-infraestructura.html">Redes e Infraestructura</a></li>
+                    <li><a href="pages/servicios/reparacion-hardware.html">Reparaciones</a></li>
+                    <li><a href="pages/servicios/montaje-custom-pc.html">Montaje de PC</a></li>
+                    <li><a href="pages/servicios/mantenimiento-pymes.html">Mantenimiento</a></li>
                 </ul>
             </nav>
             <nav>
@@ -77,5 +182,6 @@
         <p>&copy; 2025 Integral TI. Todos los derechos reservados por jbc.</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/carrusel.js"></script>
 </body>
 </html>
