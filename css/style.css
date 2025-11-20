@@ -191,6 +191,42 @@ header {
   height: 70vh;
 }
 
+
+
+@media (max-width: 1166px) {
+    .gallery-wrap {
+       display: none;
+
+    
+    }
+    .gallery-mini{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-mini img {
+        /* Define un tamaño base que sera flexible */
+        width:60vw;
+        height: auto; /* Mantiene la proporción */
+
+    }
+
+    
+
+}
+@media (min-width: 1165px) {
+    .gallery-mini{
+        display: none;
+
+}
+}
+
+
+
 .item {
   flex: 1;
   height: 100%;
