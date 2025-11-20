@@ -205,23 +205,23 @@ header {
 }
 
 .item-1 { 
-  background-image: url('/img/caso-mantenimiento.webp');
+  background-image: url('../img/caso-mantenimiento.webp');
 }
 
 .item-2 { 
-  background-image: url('/img/caso-logistica.webp');
+  background-image: url('../img/caso-logistica.webp');
 }
 
 .item-3 { 
-  background-image: url('/img/montaje-pc.webp');
+  background-image: url('../img/montaje-pc.webp');
 }
 
 .item-4 { 
-  background-image: url('/img/caso-render.webp');
+  background-image: url('../img/caso-render.webp');
 }
 
 .item-5 { 
-  background-image: url('/img/reparacion.webp');
+  background-image: url('../img/reparacion.webp');
 }
 
 
