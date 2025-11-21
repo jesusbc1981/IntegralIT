@@ -55,22 +55,58 @@
 
         <section>
             <h2>Galería de Últimos Montajes</h2>
-            <div class="galeria">
-                <div class="gallery-wrap">
-                    <div class="item item-1"></div>
-                    <div class="item item-2"></div>
-                    <div class="item item-3"></div>
-                    <div class="item item-4"></div>
-                    <div class="item item-5"></div>
-                </div>
-                <div class="gallery-mini">
-                    <img src="../../img/caso-mantenimiento.webp" alt="se ve un caso de mantenimiento">
-                    <img src="../../img/caso-logistica.webp" alt="se ve un caso de logistica">
-                    <img src="../../img/montaje-pc.webp" alt="se ve un montaje de un ordenador">
-                    <img src="../../img/caso-render.webp" alt="se ve un pc de renderizado">
-                    <img src="../../img/reparacion.webp" alt="se ve una reparacion de un pc">
-                </div>
-            </div>            
+<!-- Container for the image gallery -->
+        <div class="galeria">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="../../img/caso-mantenimiento.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="../../img/caso-mantenimiento2.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="../../img/caso-logistica.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="../../img/caso-render.webp" style="width:100%">
+        </div>
+
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+            <img class="demo cursor" src="../../img/caso-mantenimiento.webp" style="width:100%" onclick="currentSlide(1)" alt="Plan de Mantenimiento Integral PYME">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="../../img/caso-mantenimiento2.webp" style="width:100%" onclick="currentSlide(2)" alt="Actualizacion del ordenador de un usuario">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="../../img/caso-logistica.webp" style="width:100%" onclick="currentSlide(3)" alt="Infraestructura de Red para Logística S.L.">
+            </div>
+            <div class="column">
+            <img class="demo cursor" src="../../img/caso-render.webp" style="width:100%" onclick="currentSlide(4)" alt="PC Custom para Renderizado 3D">
+            </div>
+        </div>
+        </div>
+          
         </section>
         
         <section>
