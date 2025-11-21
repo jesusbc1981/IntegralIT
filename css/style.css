@@ -201,6 +201,7 @@ header {
 /* Next & previous buttons */
 .prev,
 .next {
+  background-color: black;
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -584,6 +585,12 @@ footer {
 
     text-align: center;
 }
+
+footer h3 {
+    color: white;
+}
+
+
 
 .footer-links {
     display: flex;
