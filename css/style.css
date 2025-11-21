@@ -611,6 +611,35 @@ footer h3 {
 
 
 
+/**/
+
+.footer-li {
+    color: #ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+/**/
+.footer-brand{
+  color: #ccc;
+}
+.footer-brand img{
+    max-height: 64px;
+    max-width: 223px;
+}
+.footer-brand p {
+    text-align: justify;
+    max-width: 30ch;
+}
+
+/**/
+
+
+
 /* ESTILOS DEL FORMULARIO DE CONTACTO */
 #contactForm {
     max-width: 600px;
@@ -701,6 +730,8 @@ footer h3 {
     border: 1px solid #c3e6cb;
 }
 /* FIN FORMULARIO */
+
+
 
 
 
