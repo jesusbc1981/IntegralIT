@@ -7,4 +7,4 @@ Disallow: /temp/
 Disallow: /pruebas-internas/
 
 # Especifica la ubicación del sitemap
-Sitemap: https://[tu-usuario].github.io/integral-ti/sitemap.xml
+Sitemap: https://jesusbc1981.github.io/IntegralIT/sitemap.xml
