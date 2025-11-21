@@ -179,85 +179,91 @@ header {
 
 
 /* GALERIA */
+
+
+/* Position the image container (needed to position the left and right arrows) */
 .galeria {
-    padding: 75px 0;
-    margin: 0 auto;
-    width: 1140px;
-}
-.gallery-wrap {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 70vh;
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 50px auto;
 }
 
-
-
-@media (max-width: 1166px) {
-    .gallery-wrap {
-       display: none;
-
-    
-    }
-    .gallery-mini{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-    }
-    .gallery-mini img {
-        /* Define un tamaño base que sera flexible */
-        width:60vw;
-        height: auto; /* Mantiene la proporción */
-
-    }
-
-    
-
-}
-@media (min-width: 1165px) {
-    .gallery-mini{
-        display: none;
-
-}
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-
-
-.item {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
-  
-  &:hover{
-    flex: 7;
-  }
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
-.item-1 { 
-  background-image: url('../img/caso-mantenimiento.webp');
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.item-2 { 
-  background-image: url('../img/caso-logistica.webp');
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.item-3 { 
-  background-image: url('../img/montaje-pc.webp');
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.item-4 { 
-  background-image: url('../img/caso-render.webp');
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-.item-5 { 
-  background-image: url('../img/reparacion.webp');
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 
 
