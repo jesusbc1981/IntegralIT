@@ -51,12 +51,15 @@ iframe {
 /* MARQUESINA */
 
 @keyframes scrolling {
-  /* Mueve el texto a la derecha del contenedor */
+  /* INICIO: Mueve el texto completamente fuera del contenedor a la derecha. */
   from {
-    transform: translateX(100%);
+ 
+    transform: translateX(350%);
   }
-  /* Mueve el texto completamente a la izquierda */
+
+  /* FIN: Mueve el texto a la izquierda. */
   to {
+
     transform: translateX(-100%);
   }
 }
@@ -77,10 +80,11 @@ iframe {
 }
 
 .marquee-text {
+
   /* Asegura que el span se comporte como un bloque para poder moverlo */
   display: inline-block; 
   /* Aplica la animación: nombre, duración, curva de velocidad (lineal), repetición */
-  animation: scrolling 10s linear infinite;
+  animation: scrolling 15s linear infinite;
   /* Para que el texto no se ajuste a la línea */
   white-space: nowrap; 
 }
