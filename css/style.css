@@ -49,18 +49,43 @@ iframe {
 
 
 /* MARQUESINA */
-#miMarquesina {
+
+@keyframes scrolling {
+  /* Mueve el texto a la derecha del contenedor */
+  from {
+    transform: translateX(100%);
+  }
+  /* Mueve el texto completamente a la izquierda */
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
     color:white;
     text-shadow: 3px 4px 0px black;
     line-height: 35px;
     font-weight: bold;
     font-size: 18px;
     background: crimson;
-   
+  /* Ancho de la marquesina */
+  width: 100%; 
+  /* Asegura que el texto que se sale se oculte */
+  overflow: hidden;
+  /* (Opcional) Establece una altura, por ejemplo, la de una línea de texto */
+  white-space: nowrap; 
 }
-.texto::after {
-    content: "Esta página es solo de prueba y aprendizaje";
+
+.marquee-text {
+  /* Asegura que el span se comporte como un bloque para poder moverlo */
+  display: inline-block; 
+  /* Aplica la animación: nombre, duración, curva de velocidad (lineal), repetición */
+  animation: scrolling 10s linear infinite;
+  /* Para que el texto no se ajuste a la línea */
+  white-space: nowrap; 
 }
+
+
 /* FIN MARQUESINA */
 
 /* LISTAS */
