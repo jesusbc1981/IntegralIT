@@ -47,7 +47,10 @@ iframe {
 
 /* FIN IFRAME*/
 
-
+video{
+  width: 100%;
+  height: auto;
+}
 /* MARQUESINA */
 
 @keyframes scrolling {
